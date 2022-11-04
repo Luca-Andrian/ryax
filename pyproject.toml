@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "default-modules"
+version = "0.1.0"
+description = "Ryax Default Modules"
+authors = ["Your Name <you@example.com>"]
+license = "Ryax Technologies"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+black = "^21.5b2"
+isort = "^5.8.0"
+flake8 = "^3.9.0"
+pytest = "^6.2.2"
+PyYAML = "^5.4.1"
+pytest-cov = "^2.11.1"
+mock = "^4.0.3"
+coloredlogs = "^15.0"
+aio-pika = "^6.8.0"
+google = "^3.0.0"
+google-api-python-client = "^2.0.2"
+asyncpg = "^0.23.0"
+minio = "^7.0.2"
+aioify = "^0.4.0"
+pytest-asyncio = "^0.15.1"
+paho-mqtt = "^1.5.1"
+influxdb = "^5.3.1"
+requests = "^2.25.1"
+boto3 = "^1.17.43"
+freezegun = "^1.1.0"
+google-cloud-storage = "^1.37.1"
+aiohttp = "^3.7.4"
+apprise = "^0.9.1"
+crontab = "^0.23.0"
+mysql-connector-python = "^8.0.24"
+fastapi = "^0.79.0"
+uvicorn = "^0.18.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

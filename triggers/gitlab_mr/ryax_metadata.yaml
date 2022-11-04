@@ -1,0 +1,62 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  id: gitlab-mr
+  human_name: Trigger workflow From Gitlab merge request
+  type: python3
+  version: "1.0"
+  description: "This action is triggered when a new merge request is created, an existing merge request was updated/merged/closed or a commit is added in the source branch on Gitlab.
+  Use this url to create an event : https://gitlab.com/file/project/-/hooks.
+  Select Merge requests events and set the url of the action and the secret token from inputs.
+  "
+  categories:
+  - Trigger
+  - Gitlab
+  - Developer tools
+  - Default Actions
+  inputs:
+  - help: The secret token.
+    human_name: Secret token
+    name: secret_token
+    type: string
+  outputs:
+  - help: The username.
+    human_name: Username
+    name: username
+    type: string
+  - help: The project name.
+    human_name: Project name
+    name: projectname
+    type: string
+  - help: Target branch.
+    human_name: Target branch
+    name: target_branch
+    type: string
+  - help: Source branch.
+    human_name: Source branch
+    name: source_branch
+    type: string
+  - help: Title.
+    human_name: Title
+    name: title
+    type: string
+  - help: Created at.
+    human_name: Created at
+    name: created_at
+    type: string
+  - help: Merge status.
+    human_name: Merge status
+    name: merge_status
+    type: string
+  - help: Description.
+    human_name: Description
+    name: description
+    type: string
+  - help: URL.
+    human_name: URL
+    name: url
+    type: string
+  - help: Action.
+    human_name: Action
+    name: action
+    type: string

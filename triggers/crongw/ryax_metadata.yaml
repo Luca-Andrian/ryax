@@ -1,0 +1,27 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  type: python3
+  id: crongw
+  human_name: Cron source
+  version: "1.1"
+  logo: "logo.png"
+  description: "Trigger a new run with regards to the cron expression provided."
+  categories:
+  - Trigger
+  - Timer
+  - Default Actions
+  inputs:
+  - help: >
+      'Cron like time interval description: '
+      "'<minutes 0-59> <hours 0-23> <month day 1-31>  <month 1-12> <week day 0-6>'"
+      'See https://crontab.guru/ for more examples. '
+      'Example for every 10 seconds: "*/10 * * * *"'
+    human_name: Foreach cron schedule expression
+    name: foreach
+    type: string
+  outputs:
+  - help: The current time when a new event is triggerd in UTC timestamp.
+    human_name: Current time in timestamp
+    name: time
+    type: float

@@ -1,0 +1,39 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: sql-query
+  human_name: SQL Query
+  type: python3
+  version: "1.0"
+  logo: "logo.jpeg"
+  description: "Make an SQL query and return the result in a file."
+  categories:
+  - Action
+  - Developer tools
+  - Default Actions
+  inputs:
+  - help: "Database Name"
+    human_name: "Database Name"
+    name: name
+    type: string
+  - help: "Database Host"
+    human_name: "Host"
+    name: host
+    type: string
+  - help: "Username"
+    human_name: "Username"
+    name: username
+    type: string
+  - help: "Password"
+    human_name: "Password"
+    name: password
+    type: password
+  - help: "SQL Query"
+    human_name: "Query"
+    name: query
+    type: longstring
+  outputs:
+  - help: "Resulting Data"
+    human_name: "Result"
+    name: result
+    type: file

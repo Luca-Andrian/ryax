@@ -1,0 +1,22 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  id: web-hosting-static-dir
+  human_name: Web hosting for static content
+  categories:
+  - Trigger
+  - Default Actions
+  type: python3
+  logo: logo.png
+  version: "1.6"
+  description: Host a set of static file can be use static web site or any directory full of files
+  inputs:
+    - help: A zip file containing the files to host
+      human_name: Directory containing the files to host
+      name: dir
+      type: directory
+  outputs:
+    - help: HTTP Headers in Json
+      human_name: The HTTP headers from the POST request in Json
+      name: ryax_headers
+      type: longstring

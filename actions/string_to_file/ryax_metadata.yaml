@@ -1,0 +1,24 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: str-to-txt
+  human_name: String to Text File
+  type: python3
+  version: "1.0"
+  description: "Write the input string to a text file and output it"
+  categories:
+  - Action
+  - Ryax
+  - Developer tools
+  - Default Actions
+  inputs:
+    - help: "Input String"
+      human_name: "In String"
+      name: "instring"
+      type: longstring
+  outputs:
+    - help: "Output File"
+      human_name: "Out File"
+      name: "outfile"
+      type: file
+

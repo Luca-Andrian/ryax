@@ -1,0 +1,45 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: floattoinfluxdb
+  version: "1.1"
+  human_name: Push a float into influxdb
+  type: python3
+  logo: "logo.png"
+  description: "Save a float to an influxdb instance."
+  categories:
+  - Action
+  - Developer tools
+  - Monitoring
+  - Default Actions
+  inputs:
+  - help: 'Name of the influxdb host. Example: influxdb.example.com'
+    human_name: Hostname
+    name: host
+    type: string
+  - help: 'Port of the influxdb server. Example: "8086"'
+    human_name: Port
+    name: port
+    type: integer
+    default_value: 8086
+  - help: 'Influxdb user login to access the server. Example: "root"'
+    human_name: Username
+    name: user
+    type: string
+  - help: 'Influxdb user password. Example: "mystrongpassword001"'
+    human_name: Password
+    name: password
+    type: password
+  - help: 'Influxdb database name. Example: "measures"'
+    human_name: DB name
+    name: dbname
+    type: string
+  - help: 'Name of the influxdb measurement where the value is saved. Example: "m1_state"'
+    human_name: Measurement name
+    name: measurement_name
+    type: string
+  - help: 'The value to save.'
+    human_name: Value
+    name: value
+    type: float
+  outputs: []

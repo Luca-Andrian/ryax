@@ -1,0 +1,55 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  id: gitlab-release
+  human_name: Trigger workflow From Gitlab release
+  type: python3
+  version: "1.0"
+  description: "This action is triggered when a release is created or updated on Gitlab.
+  Use this url to create an event : https://gitlab.com/file/project/-/hooks.
+  Select Release events and set the url of the action and the secret token from inputs.
+  "
+  categories:
+  - Trigger
+  - Gitlab
+  - Developer tools
+  - Default Actions
+  inputs:
+  - help: The secret token.
+    human_name: Secret token
+    name: secret_token
+    type: string
+  outputs:
+  - help: ID of release.
+    human_name: ID
+    name: id
+    type: integer
+  - help: Description.
+    human_name: Description
+    name: description
+    type: string
+  - help: Name.
+    human_name: Name
+    name: name
+    type: string
+  - help: Released at.
+    human_name: Released at
+    name: released_at
+    type: string
+  - help: Tag.
+    human_name: Tag
+    name: tag
+    type: string
+  - help: The project name.
+    human_name: Project name
+    name: projectname
+    type: string
+  - help: Url.
+    human_name: Url
+    name: url
+    type: string
+  - help: The action.
+    human_name: Action
+    name: action
+    type: string
+

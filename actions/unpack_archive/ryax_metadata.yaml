@@ -1,0 +1,22 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: unpack-archive
+  human_name: Unpack zipfile
+  type: python3
+  version: "1.0"
+  description: "Unpack a zipfile."
+  categories:
+  - Action
+  - Content & Files
+  - Default Actions
+  inputs:
+  - help: The archive file to unpack.
+    human_name: Archive file
+    name: archive
+    type: "file"
+  outputs:
+  - help: Archive content in directory.
+    human_name: Directory
+    name: directory
+    type: "directory"

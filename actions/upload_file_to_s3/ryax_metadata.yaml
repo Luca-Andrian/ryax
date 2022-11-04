@@ -1,0 +1,39 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: upload-to-bucket
+  human_name: Upload file to aws
+  type: python3
+  version: "1.0"
+  logo: "logo.png"
+  description: "Upload input file to an AWS Bucket"
+  categories:
+  - Action
+  - Amazon
+  - Content & Files
+  - Default Actions
+  inputs: 
+  - help: "A file to upload on S3."
+    human_name: "File"
+    name: file_to_upload
+    type: file
+  - help: "A 20 character long string"
+    human_name: "AWS key"
+    name: key_id
+    type: string
+  - help: "A 40 character long string"
+    human_name: "AWS secret key"
+    name: secret_key_id
+    type: password
+  - help: "Bucket Name"
+    human_name: "bucket name"
+    name: bucket_name
+    type: string
+  - help: Add a timestamp to the file name
+    human_name: Timstamp
+    name: timestamp_bool
+    type: enum
+    enum_values:
+    - timestamp
+    - no-timestamp
+  outputs: []

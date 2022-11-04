@@ -1,0 +1,54 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  id: gitlab-pipeline
+  human_name: Trigger workflow From Gitlab pipeline
+  type: python3
+  version: "1.0"
+  description: "This action is triggered when A Gitlab pipeline status changes.
+  Use this url to create an event : https://gitlab.com/file/project/-/hooks.
+  Select Pipeline events and set the url of the action and the secret token from inputs.
+  "
+  categories:
+  - Trigger
+  - Gitlab
+  - Developer tools
+  - Default Actions
+  inputs:
+  - help: The secret token.
+    human_name: Secret token
+    name: secret_token
+    type: string
+  outputs:
+  - help: ID of pipeline.
+    human_name: ID
+    name: id
+    type: integer
+  - help: Referenced branch.
+    human_name: Ref
+    name: ref
+    type: string
+  - help: SHA of the commit.
+    human_name: SHA
+    name: sha
+    type: string
+  - help: Status of pipeline.
+    human_name: Status
+    name: status
+    type: string
+  - help: Source event.
+    human_name: Source
+    name: source
+    type: string
+  - help: Created at.
+    human_name: Created at
+    name: created_at
+    type: string
+  - help: The username.
+    human_name: Username
+    name: username
+    type: string
+  - help: The project name.
+    human_name: Project name
+    name: projectname
+    type: string

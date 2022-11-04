@@ -1,0 +1,23 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: catfile
+  human_name: Cat content of a file
+  type: python3
+  logo: "logo.png"
+  version: "1.0"
+  description: "Get the content of a file and put in the output of this action, as a string."
+  categories:
+  - Action
+  - Content & Files
+  - Default Actions
+  inputs:
+  - help: File to get the content from.
+    human_name: File
+    name: file
+    type: "file"
+  outputs:
+  - help: The file content.
+    human_name: File content
+    name: stdout
+    type: "string"

@@ -1,0 +1,45 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: download-from-bucket
+  human_name: Download an object from AWS S3 Bucket.
+  type: python3
+  version: "1.1"
+  logo: "logo.png"
+  description: Download file using given object key from s3 bucket and matching strategy.
+  categories:
+  - Action
+  - Amazon
+  - Content & Files
+  - Default Actions
+  inputs: 
+  - help: A 20 character long string.
+    human_name: Your AWS key id.
+    name: key_id
+    type: string
+  - help: A 40 character long string.
+    human_name: Your AWS secret key id.
+    name: secret_key_id
+    type: password
+  - help: Bucket Name
+    human_name: bucket name
+    name: bucket_name
+    type: string
+  - help: Exact matches exact object key , while Earliest and Latest search for matching prefix and take the least or most recent match respectively
+    human_name: Match
+    name: match
+    type: enum
+    default_value: Exact
+    enum_values:
+     - Earliest
+     - Exact
+     - Latest
+  - help: Name of the file to download.
+    human_name: File name.
+    name: key
+    type: string
+  outputs:
+  - help: Downloaded file
+    human_name: Output Data
+    name: output_data
+    type: file

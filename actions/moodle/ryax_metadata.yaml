@@ -1,0 +1,23 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: moodle
+  human_name: Moodle connector
+  type: python3
+  logo: "logo.png"
+  version: "1.0"
+  description: "Connector for moodle API"
+  categories:
+  - Action
+  - Content & Files
+  - Default Actions
+  inputs:
+  - help: Connect to moodle API.
+    human_name: API
+    name: API
+    type: "API"
+  outputs:
+  - help: The file content.
+    human_name: File content
+    name: stdout
+    type: "string"

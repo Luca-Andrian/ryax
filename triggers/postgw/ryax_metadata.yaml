@@ -1,0 +1,20 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  id: postgw
+  human_name: HTTP POST
+  categories:
+  - Trigger
+  - Interactive
+  - Default Actions
+  type: python3
+  version: "1.5"
+  logo: "logo.png"
+  dynamic_outputs: true
+  description: "Triggered on receiving data on an HTTP POST request or through an online integrated form. "
+  outputs:
+    - help: HTTP Headers in Json
+      human_name: The HTTP headers from the POST request in Json
+      name: ryax_headers
+      type: longstring
+

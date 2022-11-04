@@ -1,0 +1,47 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: send-email-attachment
+  human_name: Send e-mail with attachment file
+  type: python3
+  version: "1.1"
+  logo: "logo.png"
+  description: "This action sends email with attachment file using an SMTP server (doesn't support Gmail host)."
+  categories:
+  - Action
+  - Communication
+  - Default Actions
+  inputs:
+  - help: 'SMTP server host address'
+    human_name: Host
+    name: host
+    type: "string"
+  - help: 'SMTP server port'
+    human_name: Port
+    name: port
+    type: "integer"
+    default_value: 587
+  - help: "Sender's mail password"
+    human_name: Password
+    name: password
+    type: "password"
+  - help: "Sender's mail address"
+    human_name: Sender email address
+    name: from
+    type: "string"
+  - help: 'Destination mail address'
+    human_name: Destination email address
+    name: to
+    type: "string"
+  - help: 'Subject of the email'
+    human_name: Subject of the email
+    name: subject
+    type: "string"
+  - help: 'Body of the email'
+    human_name: Body of the email
+    name: message
+    type: "longstring"
+  - help: "Attachment file"
+    human_name: Attachment
+    name: attachment
+    type: "file"

@@ -1,0 +1,20 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: sleep
+  human_name: Sleep
+  type: python3
+  version: "1.2"
+  description: "Sleep for a given number of seconds"
+  logo: "logo.jpg"
+  categories:
+  - Action
+  - Timer
+  - Default Actions
+  inputs:
+  - help: Real number; sleep time in seconds
+    human_name: Sleep for
+    name: sleepfor
+    type: "float"
+    default_value: 1.0
+  outputs: []

@@ -1,0 +1,91 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Processor
+spec:
+  id: echo
+  human_name: Echo inputs into outputs
+  type: python3
+  version: "1.2"
+  description: "Echo all inputs into outputs. For testing purpose!"
+  categories:
+  - Action
+  - Ryax
+  - Developer tools
+  - Default Actions
+  inputs:
+    - help: For testing
+      human_name: Test integer
+      name: test_int
+      type: integer
+      default_value: 1
+    - help: For testing
+      human_name: Test string
+      name: test_str
+      type: string
+      default_value: test string!
+    - help: For testing
+      human_name: Test float
+      name: test_float
+      type: float
+      default_value: 3.14
+    - help: For testing
+      human_name: Test password
+      name: test_password
+      type: password
+      default_value: thisIsAPassword
+    - help: For testing
+      human_name: Test longstring
+      name: test_longstring
+      type: longstring
+      default_value: this is a not so long string...........................................................................
+    - help: For testing
+      human_name: Test enum
+      name: test_enum
+      type: enum
+      enum_values:
+        - toto
+        - tata
+      default_value: toto
+    - help: For testing
+      human_name: Test file
+      name: test_file
+      type: file
+    #- help: For testing
+    #  human_name: Test directory
+    #  name: test_dir
+    #  type: directory
+  outputs:
+    - help: For testing
+      human_name: Test integer
+      name: test_int
+      type: integer
+    - help: For testing
+      human_name: Test string
+      name: test_str
+      type: string
+    - help: For testing
+      human_name: Test float
+      name: test_float
+      type: float
+    - help: For testing
+      human_name: Test password
+      name: test_password
+      type: password
+    - help: For testing
+      human_name: Test longstring
+      name: test_longstring
+      type: longstring
+    - help: For testing
+      human_name: Test enum
+      name: test_enum
+      type: enum
+      enum_values:
+        - toto
+        - tata
+    - help: For testing
+      human_name: Test file
+      name: test_file
+      type: file
+    #- help: For testing
+    #  human_name: Test directory
+    #  name: test_dir
+    #  type: directory

@@ -1,0 +1,44 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: slack-alerting
+  human_name: Publish alert on slack channel
+  type: python3
+  version: "1.0"
+  description: "Publish notifications on slack channel with Apprise. Generate Webhook URL from https://my.slack.com/services/new/incoming-webhook/"
+  categories:
+  - Action
+  - Messaging
+  - Developer tools
+  - Default Actions
+  inputs:
+  - help: Get tokenA from webhook url https://hooks.slack.com/services/{tokenA}/{tokenB}/{tokenC}
+    human_name: tokenA
+    name: tokenA
+    type: "password"
+  - help: Get tokenB from webhook url https://hooks.slack.com/services/{tokenA}/{tokenB}/{tokenC}
+    human_name: tokenB
+    name: tokenB
+    type: "password"
+  - help: Get tokenC from webhook url https://hooks.slack.com/services/{tokenA}/{tokenB}/{tokenC}
+    human_name: tokenC
+    name: tokenC
+    type: "password"
+  - help: Title of the notification message that will be shown on slack channel
+    human_name: Title of the notification
+    name: title
+    type: "string"
+  - help: The notification message that will be shown on slack channel
+    human_name: The notification message
+    name: message
+    type: "longstring"
+  - help: "Notification type might be info, success, warning or failure. info is set by default"
+    human_name: Notification type
+    name: notify_type
+    type: enum
+    enum_values:
+      - info
+      - success
+      - warning
+      - failure
+  outputs: []

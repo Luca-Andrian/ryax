@@ -1,0 +1,38 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: twitter-alerting
+  human_name: Publish a tweet on twitter
+  type: python3
+  version: "1.0"
+  description: "Publish a tweet message on twitter. Create a twitter app from apps.twiter.com and then generate access token from \"generate the Access Tokens\" menu"
+  categories:
+  - Action
+  - Messaging
+  - Default Actions
+  inputs:
+  - help: Get a Consumer Key
+    human_name: Consumer Key
+    name: ConsumerKey
+    type: "password"
+  - help: Get a Consumer Secret
+    human_name: Consumer Secret
+    name: ConsumerSecret
+    type: "password"
+  - help: Get an Access Token
+    human_name: Access Token
+    name: AccessToken
+    type: "password"
+  - help: Get an Access Token Secret
+    human_name: Access Token Secret
+    name: AccessSecret
+    type: "password"
+  - help: Title of the tweet that will be published on twitter
+    human_name: Title of the tweet
+    name: title
+    type: "string"
+  - help: The tweet message that will be published on twitter
+    human_name: The tweet message
+    name: message
+    type: "longstring"
+  outputs: []

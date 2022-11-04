@@ -1,0 +1,32 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: gcp-storage-writer
+  human_name: Google cloud storage
+  type: python3
+  version: "1.0"
+  logo: "logo.png"
+  description: "Push file and directory to Google Cloud Storage"
+  categories:
+  - Action
+  - Google
+  - Content & Files
+  - Default Actions
+  inputs:
+  - help: https://cloud.google.com/storage/docs/reference/libraries#setting_up_authentication
+    human_name: Google storage credentials' file
+    name: gcp_sto_creds
+    type: "file"
+  - help: Bucket name you want to push your files
+    human_name: Google storage bucket name
+    name: gcp_sto_bucket
+    type: "string"
+  - help: A single file to upload
+    human_name: Single file to upload
+    name: file_to_upload
+    type: "file"
+  - help: An optional directory to add on the path
+    human_name: Directory that will be created within the bucket
+    name: dir_to_upload
+    type: "string"
+  outputs: []

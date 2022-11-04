@@ -1,0 +1,23 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Publisher
+spec:
+  id: dir-archive
+  human_name: Archive a directory
+  type: python3
+  version: "1.1"
+  description: "Archive a directory into a zip file."
+  logo: logo.png
+  categories:
+  - Action
+  - Content & Files
+  - Default Actions
+  inputs:
+  - help: Directory to archive.
+    human_name: Directory
+    name: directory
+    type: "directory"
+  outputs:
+  - help: The archive file of input directory.
+    human_name: Archive file
+    name: archive
+    type: "file"

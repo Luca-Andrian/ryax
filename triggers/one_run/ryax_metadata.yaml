@@ -1,0 +1,14 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  id: one-run
+  human_name: Run once
+  type: python3
+  version: "1.1"
+  description: Launches a single run of the workflow
+  logo: logo.png
+  categories:
+  - Trigger
+  - Developer tools
+  - Timer
+  - Default Actions

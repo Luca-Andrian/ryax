@@ -1,0 +1,27 @@
+apiVersion: "ryax.tech/v2.0"
+kind: Source
+spec:
+  id: mqttgw
+  human_name: MQTT Source
+  type: python3
+  version: "1.0"
+  logo: "logo.png"
+  description: "Ingest data from an MQTT server. Each message on the given topic will trigger a run."
+  categories:
+  - Trigger
+  - Internet of Things
+  - Default Actions
+  inputs:
+  - help: The MQTT server to subscribe on.
+    human_name: MQTT server
+    name: mqtt_server
+    type: string
+  - help: The MQTT topic to subscribe on.
+    human_name: MQTT topic
+    name: mqtt_topic
+    type: string
+  outputs:
+  - help: The content of the MQTT message read from the topic.
+    human_name: MQTT message value
+    name: value
+    type: string
