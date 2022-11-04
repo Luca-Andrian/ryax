@@ -4,20 +4,16 @@ spec:
   id: moodle
   human_name: Moodle connector
   type: python3
-  logo: "logo.png"
   version: "1.0"
-  description: "Connector for moodle API"
+  logo: "logo.png"
+  description: "This action sends email using an SMTP server (doesn't support Gmail host)."
   categories:
   - Action
+  - Ryax
   - Developer tools
   - Default Actions
   inputs:
-  - help: "Connect to moodle API".
-    human_name: API
-    name: API
-    type: "API"
-  outputs:
-  - help: The file content.
-    human_name: "Result"
-    name: result
-    type: "string"
+  - help: 'Body of the email'
+    human_name: Body of the email
+    name: message
+    type: "longstring"
