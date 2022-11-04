@@ -6,14 +6,14 @@ spec:
   type: python3
   version: "1.0"
   logo: "logo.png"
-  description: "This action sends email using an SMTP server (doesn't support Gmail host)."
+  description: "This action call moodle API."
   categories:
   - Action
   - Ryax
   - Developer tools
   - Default Actions
   inputs:
-  - help: 'Body of the email'
-    human_name: Body of the email
+  - help: 'URL'
+    human_name: URL
     name: message
     type: "longstring"
