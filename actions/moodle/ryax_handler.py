@@ -6,5 +6,5 @@
 import requests
 
 def handle(inputs: dict = {}):
-    response = requests.get('https://reqres.in/api/users?page=2')
+    response = requests.get('http://51.178.136.185:80/moodle/login/token.php?username=ryax_user&password=zWCD3HjpeTgQrMa-&service=ryaxService')
     return response.json()
